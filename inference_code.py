@@ -26,7 +26,7 @@ if fan_orientation == "Hub Facing D cover":
             "Alumunium" : 1.4,
             "AL+B4C" : 1.9,
             "CFRP" : 3.5,
-            "PC ABS" : 78,
+            "PC ABS" : 0.6,
         }
 
         PD_dict = {}
