@@ -119,6 +119,6 @@ default = 10.5
 dcm = dcm_dict[double(input("Enter D cover material"))]
         
 
-        pogo_output = default*dcm*dct
+Pogo_output = default*dcm*dct
 
 
