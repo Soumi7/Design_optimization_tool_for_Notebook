@@ -1,3 +1,4 @@
+from distutils.log import debug
 from flask import Flask, request, jsonify, render_template, url_for, make_response
 from werkzeug.utils import secure_filename
 import os
@@ -8,7 +9,6 @@ app.config['UPLOAD_FOLDER'] = "./imgdir"
 import numpy as np
 import cv2
 import pandas as pd
-import pytesseract
 import io
 from PIL import Image
 #import StringIO
@@ -18,10 +18,13 @@ from PIL import Image
 # Load the model
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
+@app.route('/fan_orientation', methods=["GET","POST"])
+def fan_orientation():
+    return render_template('fan_orientation.html')
 
-@app.route('/predict_api', methods=["GET","POST"])
+@app.route('/calculate', methods=["GET","POST"])
 def list_post():    
     # #data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32) #number of images 1 (RGB image)
     # data = request.files['data']
@@ -40,7 +43,7 @@ def list_post():
 
     json_body = request.get_json()
     predictions = 2 * json_body[0]   
-    predictions = list(predictions)
+    #predictions = list(predictions)
     #return jsonify(results = predictions)
 
 
@@ -86,4 +89,4 @@ def list_post():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5000)
+    app.run(host='0.0.0.0',port=5000, debug=True)
