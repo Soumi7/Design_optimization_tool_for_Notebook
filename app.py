@@ -47,7 +47,7 @@ def list_post():
     #predictions = list(predictions)
     #return jsonify(results = predictions)
 
-    #######################
+    ######################
 
     # inputs
 
@@ -63,7 +63,7 @@ def list_post():
 
     file = request.files['file']
     npimg = np.fromfile(file, np.uint8)
-    img = cv2.imdecode(npimg, 0)
+    
 
     thresh,img_bin = cv2.threshold(img,128,255,cv2.THRESH_BINARY | cv2.THRESH_OTSU)
     img_bin = 255-img_bin
