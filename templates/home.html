@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script data-ad-client="ca-pub-8844979755354746" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    
+    <!-- <script src="{{ url_for('static', filename='js/home.js') }}"></script> -->
 
 </head>
 <body>
 <nav>
     <div class="container nav-wrapper">
-        <a href="/" class="brand-logo">Table Data Extraction</a>
+        <a href="/" class="brand-logo">Design optimization tool</a>
         <ul id="nav-mobile" class="right">
             <li><a href="/">Home</a></li>
             <li>
@@ -38,6 +39,14 @@
                 <i class="large material-icons" style="color: #EE6E73">image</i>
                 <p>Design optimization tool</p>
                 <p class="light center">Optimize your design!</p>
+
+                <form action="{{ url_for('fan_orientation')}}"method="post">
+                    <input type="text" name="D cover material" placeholder="Date" required="required" />
+                    
+                    <input type="text" name="Gasket/Emboss" placeholder="Product Group" required="required" />
+            
+                    <button type="submit" class="btn btn-primary btn-block btn-large">fan orientation</button>
+                </form>
             </div>
         </div>
 
@@ -73,11 +82,15 @@
 
 
         <input placeholder="Enter some text" name="name"/>
-        <p id="values"></p>     
+        <p id="values"></p> 
+        <br>    
     
 </div>
 
+<script type=text/javascript src="{{  url_for('static', filename='js/home.js') }}"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 
 </body>
 </html>

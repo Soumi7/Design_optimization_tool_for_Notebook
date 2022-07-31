@@ -12,10 +12,7 @@ import pandas as pd
 import io
 from PIL import Image
 #import StringIO
-#import csv
 
-# Disable scientific notation for clarity
-# Load the model
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -45,7 +42,6 @@ def list_post():
     predictions = 2 * json_body[0]   
     #predictions = list(predictions)
     #return jsonify(results = predictions)
-
 
     #######################
 
