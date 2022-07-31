@@ -11,7 +11,7 @@ import cv2
 import pandas as pd
 import io
 from PIL import Image
-#import StringIO
+#import StringI
 
 @app.route('/')
 def home():
@@ -20,6 +20,10 @@ def home():
 @app.route('/fan_orientation', methods=["GET","POST"])
 def fan_orientation():
     return render_template('fan_orientation.html')
+
+@app.route('/unit_of_measure', methods=["GET","POST"])
+def unit_of_measure():
+    return render_template('unit_of_measure.html')
 
 @app.route('/calculate', methods=["GET","POST"])
 def list_post():    
@@ -36,7 +40,7 @@ def list_post():
 
     #npimg = np.fromfile(request.files['file'], numpy.uint8)
     # convert numpy array to image
-    #img = cv2.imdecode(npimg, cv2.IMREAD_GRAYSCALE)
+    #img = cv2.imdecode(npimg, cv2.IMREAD_GRAYSCALE
 
     json_body = request.get_json()
     predictions = 2 * json_body[0]   
@@ -54,7 +58,7 @@ def list_post():
     
     group=int_features[1]
 
-    ######################
+    #####################
 
 
     file = request.files['file']
@@ -63,7 +67,7 @@ def list_post():
 
     thresh,img_bin = cv2.threshold(img,128,255,cv2.THRESH_BINARY | cv2.THRESH_OTSU)
     img_bin = 255-img_bin
-    #####################3
+    #####################
     
     
 

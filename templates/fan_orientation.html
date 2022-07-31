@@ -36,6 +36,11 @@
                 <i class="large material-icons" style="color: #EE6E73">image</i>
                 <p>Table Data Extraction</p>
                 <p class="light center">Convert your image to a table.</p>
+
+                <form action="{{ url_for('fan_orientation')}}"method="post">
+                           
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Fan facing D-cover</button>
+                </form>
             </div>
         </div>
 
@@ -45,15 +50,11 @@
                 <i class="large material-icons" style="color: orange">cloud_download</i>
                 <p>Download!</p>
                 <p class="light center">Download the table as a csv!</p>
-            </div>
-        </div>
 
-        <div class="col s4">
-            <!-- Promo Content 3 goes here -->
-            <div class="center">
-                <i class="large material-icons" style="color: blue">code</i>
-                <p>Try it out!</p>
-                <p class="light center">I built this with ❤️!</p>
+                <form action="{{ url_for('fan_orientation')}}"method="post">
+                           
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Fan facing D-cover</button>
+                </form>
             </div>
         </div>
     </div>
@@ -66,7 +67,7 @@
 
     <!-- to take inputs -->
 
-    <form action="{{ url_for('predict')}}"method="post">
+    <form action="{{ url_for('')}}"method="post">
     	<input type="text" name="D cover material" placeholder="Date" required="required" />
         
 		<!--<input type="text" name="Elastic Modulus" placeholder="Product Group" required="required" />-->

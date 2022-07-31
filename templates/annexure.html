@@ -1,0 +1,256 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Design Optimization Tool for Notebook</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script data-ad-client="ca-pub-8844979755354746" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <!-- <script src="{{ url_for('static', filename='js/home.js') }}"></script> -->
+
+</head>
+<body>
+<nav>
+    <div class="container nav-wrapper">
+        <a href="/" class="brand-logo">Design optimization tool</a>
+        <ul id="nav-mobile" class="right">
+            <li><a href="/">Home</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/soumi-bardhan-8539b3191/">
+                    <i class="large material-icons" style="color: white">person_add</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <h2 style="text-align: center">Annexure</h2>
+    <h4 style="text-align: center">No worries!</h4>
+    <br>
+    
+
+    <br>
+
+    <h4 style="text-align: center">
+    
+        Pogo load																					
+																					
+§  Load encountered by Notebook enclosure during normal day-to-day usage (being picked up, moved, packed into a travel bag, palm rest, typing, etc.).																					
+§  The application of pogo load causes the failure of laptop components. For example, deterioration of fan performance, abnormal fan noise, a permanent deformation in the fan grill    area, battery failure, internal shorting, etc.																					
+																					
+§  To prevent these failures, the chassis needs to be designed with sufficient stiffness and integrity to withstand Pogo loads, making it an important criterion in chassis design.																					
+																					
+Critical area of concern- Pogo loading																					
+																					
+"§   Highlighted green region on D cover is stiff because of geometry and bonding of C and D cover can withstand higher Pogo load before failure. 
+   "																					
+§ Red region typically in fan grill area (fan location ) considered as critical failure area for Pogo loading because it is unsupported and chassis deflection is higher in this region. Thermal solution (Die area) is not critical because die pressure limit is up to 800 psi can withstand higher pogo loads.																					
+																					
+																					
+																																									
+Types of fan orientation in Notebook design 	
+Critical area for pogo loading				
+Two types of fan orientation used in Notebook design : 1) Fan hub facing D cover 2) Fan hub facing C cover																					
+																					
+			Fan hub facing D cover											Fan hub facing C cover							
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+"§  This is conventional fan orientation provides better thermal performance 
+    but less load carrying capacity when compared to hub facing C cover."									§ This fan orientation affects thermal performance of Notebook but significantly increase Pogo load carrying capacity. Recommended to use this fan orientation if there is no significant reduction in thermal performance.												
+																					
+																					
+																					
+Failure Mode: D cover touching fan hub									Failure Modes: Fan blade touching fan casing								 Fan hub touching keyboard				
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+		 Hub failure							 Blade failure							Hub failure					
+																					
+§  D cover deflects and touches to fan hub due to theapplication of pogo load, causes abnormal fan noise and change in fan performance.									§  Due to the application of pogo load, first D cover deflects and touches the fan casing, after fan casing (Motor   side) will carry forward the load and deflects the fan causes either blade failure or hub failure.												
+																					
+																					
+§ Load required to stop the fan depends on only stiffness of D cover.									§  Load required to stop the fan depends on combined stiffness of D cover and fan casing.												
+									"§  To avoid fan blade failure and increase Pogo load carrying capacity, the internal air gap between fan blade 
+   and fan casing ( hub side) should be greater than air gap available between hub and keyboard backplate."												
+																					
+																					
+Design parameters affecting Pogo load carrying of Notebook 																					
+																					
+					§  D cover material							"§  Fan internal air gap between fan casing (hub side)
+and fan blade"									
+					§  D cover thickness																
+					§  Air gap between fan hub and D cover							§   Ribs / support on D cover 									
+					§  Fan grill pattern							§   Support pins between top and bottom casing									
+					§  Probe diameter							§    Location and number of gasket/emboss									
+					§  Fan size							§    Local thinning of D cover									
+					§  Gasket/ Emboss							§    Fan location from edge of laptop									
+					§  Fan casing thickness ( Motor side)							§    Fan mounting location									
+					"§  Air gap between fan casing (Motor side) 
+and C cover"							§    Width of fan plastic mold									
+																					
+																					
+Critical design parameters included in tool:																					
+																					
+D cover thickness,material and air gap between fan hub and D cover																					
+																					
+§    Strength and stiffness of D cover depends on its material and thickness.																					
+																					
+"§ Elastic modulus of chassis material  is important parameter to avoid chassis deflection and improve Pogo load
+ carrying capacity of Notebook."																					
+																					
+§ Five types of materials are included in tool: 1) Magnesium 2) Aluminum 3) Al+B4C 4)CFRP and 5) PC ABS																					
+§ Material properties of all materials are included in material database section.																					
+															 Cross sectional view of Notebook						
+																					
+Fan grill patterns and Probe diameter																					
+																					
+§  Three types of fan grill patterns included in tool: 1) Pinhole 2) Jailbar 3) Clean D 																					
+§  Probe diameters are used to simulate finger/Palm loading.																					
+§  Range of probe diameters varies between 10 to 60 mm and depends on customers.																					
+§  Standard specification for probe diameter for AEP systems is 10 mm.																					
+																					
+															 Fan grill patterns						
+Gasket / Emboss																					
+																					
+"§  The touchpoints are provided on fan casing to restrict the deflection of D cover and improve the Pogo 
+load carrying capacity of the notebook."																					
+																					
+																					
+§  Embosses are the projections on the fan casing made of same material as casing (Mostly steel and copper).																					
+																					
+"§  Gaskets are typically made of Neoprene, polyurethane rubber. The desirable property of the gasket is that
+it will initially compress up to a certain thickness at less pressure and then it will a reach solid state (It will not deform on further application of high pressure)."																					
+																					
+																					
+																					
+"§  Emboss provides higher Pogo load carrying capacity compared to gasket because of its high stiffness and 
+location near to circular cutout on fan casing. "																					
+																					
+																					
+																					
+			Note: Certain factors were considered while developing this tool																		
+			1)	Location and number of gasket/Emboss on fan casing are fixed. 																	
+			2)	0.35 mm tolerance considered for embossing. If air gap is less than 0.35 mm, emboss feature will not work. 																	
+			                 3)	No tolerance considered for gasket.																	
+			4) 	For PC ABS material, Emboss height is restircted up to 0.6 mm.																	
+			           5)	Embossing is not considered for fan orientation-hub facing C cover. All predictedresults are with respect to gaskets only.																	
+																					
+																					
+Fan Size																					
+																					
+§ Small size fan provides higher Pogo load carrying capacity compared to large size fan.																					
+																					
+																					
+																					
+																					
+																					
+§ Following figure shows different types of fans included in tool.																					
+																					
+§  Type of fan -Single outlet fan 1) 50*48*3.5 2) 63*63*4 3)65*65*4 4) 80*70*5 mm																					
+																					
+                             -Dual outlet 1) 63*70*5.3  2) 80*75*6.95  3) 81*83*5 mm																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+50*48*3.5 mm						63*63*4 mm						65*65*4 mm				80*70*5 mm					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+			63*70*5.3 mm							80*75*6.95 mm							81*83*5 mm				
+																					
+																					
+																					
+																					
+																					
+Fan casing thickness, Air gap between fan casing and keyboard and Fan internal air gap																					
+																					
+§  These factors are critical in fan orientation- hub facing C cover.																					
+																					
+§  Fan casing thickness( Motor side) is the most critical factor in hub facing C cover case as Pogo load from D cover tranfers to the casing. Hence, Load carrying capacity majorly depends on stiffness of fan casing.																					
+																					
+																					
+§  User can improve load carrying by increasing air gap between fan casing and keyboard and reducing air gap between D cover and fan casing for same stack.																					
+																					
+																					
+§  Fan internal air gap between fan blade and fan casing (motor side) should be greater than air gap 2 to avoid blade failure.																					
+															Cross sectional view of Notebook						
+															 Cross sectional view of Notebook						
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+
+    
+    </h4>
+    
+    <br>
+    <br>
+
+    <!-- to take inputs -->
+
+    
+
+
+        <input placeholder="Enter some text" name="name"/>
+        <p id="values"></p> 
+        <br>    
+    
+</div>
+
+<script type=text/javascript src="{{  url_for('static', filename='js/home.js') }}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</body>
+</html>

@@ -37,15 +37,12 @@
             <!-- Promo Content 1 goes here -->
             <div class="center">
                 <i class="large material-icons" style="color: #EE6E73">image</i>
-                <p>Design optimization tool</p>
-                <p class="light center">Optimize your design!</p>
+                <p>Instructions</p>
+                <p class="light center">Insructions for design!</p>
 
                 <form action="{{ url_for('fan_orientation')}}"method="post">
-                    <input type="text" name="D cover material" placeholder="Date" required="required" />
-                    
-                    <input type="text" name="Gasket/Emboss" placeholder="Product Group" required="required" />
-            
-                    <button type="submit" class="btn btn-primary btn-block btn-large">fan orientation</button>
+                           
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Instructions</button>
                 </form>
             </div>
         </div>
@@ -54,8 +51,13 @@
             <!-- Promo Content 2 goes here -->
             <div class="center">
                 <i class="large material-icons" style="color: orange">cloud_download</i>
-                <p>Download!</p>
-                <p class="light center">Download the table as a csv!</p>
+                <p>Pogo Load Calculator</p>
+                <p class="light center">Go to the Pogo Load Calculator!</p>
+
+                <form action="{{ url_for('calculate')}}"method="post">
+                           
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Pogo Load Calculator</button>
+                </form>
             </div>
         </div>
 
@@ -63,8 +65,62 @@
             <!-- Promo Content 3 goes here -->
             <div class="center">
                 <i class="large material-icons" style="color: blue">code</i>
-                <p>Try it out!</p>
-                <p class="light center">I built this with ❤️!</p>
+                <p>SOP - Pogo testing!</p>
+                <p class="light center">SOP - pogo testing details!</p>
+
+                <form action="{{ url_for('sop_pogo_testing')}}"method="post">
+                           
+                    <button type="submit" class="btn btn-primary btn-block btn-large">SOP - Pogo testing</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col s4">
+            <!-- Promo Content 1 goes here -->
+            <div class="center">
+                <i class="large material-icons" style="color: #EE6E73">image</i>
+                <p>Testing results</p>
+                <p class="light center">Check out the testing results!</p>
+
+                <form action="{{ url_for('testing_results')}}"method="post">
+                           
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Testing results</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col s4">
+            <!-- Promo Content 2 goes here -->
+            <div class="center">
+                <i class="large material-icons" style="color: orange">cloud_download</i>
+                <p>Material database</p>
+                <p class="light center">Material database!</p>
+
+                <form action="{{ url_for('material_database')}}"method="post">
+                           
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Material database</button>
+                </form>
+
+
+            </div>
+        </div>
+
+        <div class="col s4">
+            <!-- Promo Content 3 goes here -->
+            <div class="center">
+                <i class="large material-icons" style="color: blue">code</i>
+                <p>Annexure</p>
+                <p class="light center">Check out the annexure!</p>
+                
+                <form action="{{ url_for('fan_orientation')}}"method="post">
+                           
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Annexure</button>
+                </form>
+
             </div>
         </div>
     </div>
